@@ -82,7 +82,6 @@ function App() {
               <thead>
                 <tr>
                   <th>Possesseur</th>
-                  <th>Type</th>
                   <th>Libelle</th>
                   <th>Date de debut</th>
                   <th>Date de fin</th>
@@ -94,7 +93,6 @@ function App() {
                 {possessions.concat(flux).map((element, index) => (
                   <tr key={index}>
                     <td>John Doe</td>
-                    <td>{element instanceof Flux ? 'Flux' : 'Possession'}</td>
                     <td>{element.libelle}</td>
                     <td>{element.dateDebut.toISOString().split('T')[0]}</td>
                     <td>{element.dateFin ? element.dateFin.toISOString().split('T')[0] : 'Null'}</td>
